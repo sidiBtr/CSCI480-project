@@ -1,0 +1,15 @@
+# Node.js
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Build output
+build/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
