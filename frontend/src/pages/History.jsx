@@ -1,4 +1,5 @@
 import React from 'react'
+import './historyPage.css'
 
 export default function History() {
   return (

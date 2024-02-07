@@ -1,4 +1,5 @@
 import React from 'react'
+import './aboutusPage.css'
 
 export default function AboutUs() {
   return (

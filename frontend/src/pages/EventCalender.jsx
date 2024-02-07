@@ -1,4 +1,5 @@
 import React from 'react'
+import './eventscalenderPage.css'
 
 export default function EventCalender() {
   return (
