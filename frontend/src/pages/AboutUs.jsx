@@ -4,7 +4,7 @@ import './aboutusPage.css'
 export default function AboutUs() {
   return (
     <div>
-      <h2>About us</h2>
+      <h2>About us page added</h2>
     </div>
   )
 }
