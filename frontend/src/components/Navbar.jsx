@@ -12,9 +12,6 @@ export default function Navbar() {
             <Link to={'/events'}>
             <li>Events</li>
             </Link>
-           <Link to={'/history'}>
-           <li>History</li>
-           </Link>
            <Link to={'/aboutUs'}>
            <li>About Us</li>
            </Link>
