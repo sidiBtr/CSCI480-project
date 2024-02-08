@@ -3,8 +3,8 @@ import './historyPage.css'
 
 export default function History() {
   return (
-    <div>
-      <h2>History</h2>
+    <div className='history-container'>
+      <h2>History of the Club</h2>
     </div>
   )
 }
