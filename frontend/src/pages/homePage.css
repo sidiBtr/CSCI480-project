@@ -1,0 +1,10 @@
+.textArea {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+
+.homeText {
+    font-size: 26px;
+    font-family: "Open Sans", sans-serif
+}
