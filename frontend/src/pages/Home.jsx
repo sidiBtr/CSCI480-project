@@ -1,6 +1,5 @@
 import React from 'react'
 import './homePage.css'
-import Eagle from './images/Eagle.JPG'
 
 export default function Home() {
   return (
