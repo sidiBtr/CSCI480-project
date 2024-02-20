@@ -1,0 +1,14 @@
+h2{
+    color: maroon;
+    font-family: serif;
+    text-align: center;
+}
+
+p{
+
+    text-align: center;
+    color: black;
+    padding: 0 0 40px 0;
+    font-size: 17px;
+    font-family: serif;
+}
