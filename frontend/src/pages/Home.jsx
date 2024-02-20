@@ -13,7 +13,7 @@ export default function Home() {
         in Northwestern Ohio. The club offers a carving resource center for classes, power equipment, 
         tools, wood supply, a resource library and weekly fellowship among members 
         at our clubhouse at open carving sessions and scheduled events. 
-        The clubhouse is located at 2230 Blanchard Avenue in Findlay, Ohio </p>
+        The clubhouse is located at 2230 Blanchard Avenue in Findlay, Ohio. </p>
       </div>
     </div>
     <footer>
@@ -23,7 +23,7 @@ export default function Home() {
         <div className="social-media-icons">
           {/* Add social media icons here */}
         </div>
-      </footer>
+    </footer>
     </>
     
   );
