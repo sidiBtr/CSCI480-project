@@ -1,11 +1,17 @@
+.AboutUs-Container{
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20px;
+}
 h2{
     color: maroon;
     font-family: serif;
     text-align: center;
 }
 
-p{
 
+p{
     text-align: center;
     color: black;
     padding: 0 0 40px 0;

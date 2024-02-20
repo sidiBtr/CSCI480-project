@@ -3,9 +3,10 @@ import './aboutusPage.css'
 
 export default function AboutUs() {
   return (
-    <div>
+    <div className = "AboutUs-Container">
       <h2>History</h2>
-         <p>The Millstream Woodcarvers Club owes its existence to the imagination of our founder, Thomas O. Miller.</p>
+      <div className='page-content'>
+      <p>The Millstream Woodcarvers Club owes its existence to the imagination of our founder, Thomas O. Miller.</p>
          <p>
          Tom was introudced to wood carving in 1983 through a course taught at Findlay High School. He was so moved by the experience
          that he decided to surround himself wih fellow carvers who shared his interests. Through his tireless efforts, the club was 
@@ -30,6 +31,7 @@ export default function AboutUs() {
           has allowed the Millstream Wood Carvers organization to continue to flourish in a spacious and comfortable environment,
           dedicated to share their enthusiasm for woodcarving anyone who is interested.
          </p>
+      </div>
     </div>
   )
 }
