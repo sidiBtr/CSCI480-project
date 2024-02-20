@@ -1,0 +1,35 @@
+.admin-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FEE8B0;
+}
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    border: 1px solid black;
+    width: 70%;
+    height: 80%;
+    box-shadow: 5px 1px 5px green;
+}
+label {
+    margin-right: 10px;
+}
+input {
+    outline: none;
+}
+button {
+    background: #0C359E;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15%;
+}
+button:hover {
+    background-color: chartreuse;
+}
