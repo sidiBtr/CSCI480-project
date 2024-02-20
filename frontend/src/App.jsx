@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import EventCalender from './pages/EventCalender'
 import AboutUs from './pages/AboutUs'
+import Admin from './pages/Admin'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/aboutUs' element={<AboutUs/>}/>
           <Route path='/events' element={<EventCalender/>}/>
+          <Route path='/admin' element= {<Admin/>}/>
         </Routes>
       </Router>
     </div>
