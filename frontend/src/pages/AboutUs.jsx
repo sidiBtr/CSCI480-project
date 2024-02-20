@@ -3,7 +3,7 @@ import './aboutusPage.css'
 
 export default function AboutUs() {
   return (
-    <div className = "AboutUs-Container">
+    <div>
       <h2>History</h2>
       <div className='page-content'>
       <p>The Millstream Woodcarvers Club owes its existence to the imagination of our founder, Thomas O. Miller.</p>
