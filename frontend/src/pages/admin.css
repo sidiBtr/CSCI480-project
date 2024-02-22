@@ -9,25 +9,22 @@
 form {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     gap: 15px;
     background: white;
-    border: 1px solid black;
     width: 70%;
     height: 80%;
-    box-shadow: 5px 1px 5px green;
 }
-label {
-    margin-right: 10px;
-}
+
 input {
     outline: none;
+    padding: 3px;
 }
 button {
-    background: #0C359E;
+    background: black;
     color: white;
-    padding: 5px 15px;
+    padding: 2px 5px;
     border-radius: 15%;
 }
 button:hover {

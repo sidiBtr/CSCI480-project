@@ -5,15 +5,12 @@ export default function Admin() {
   return (
     <div className='admin-container'>
       <form>
-        <div>
-            <label>Username</label>
             <input type='text' id='username' required placeholder='Username'/>
-        </div>
-        <div>
-            <label>Password</label>
-            <input type='text' id='username' required placeholder='Password'/>
-        </div>
-        <button>Login</button>
+            <input type='text' id='email' required placeholder='Email'/>
+            <input type='text' id='password' required placeholder='Password'/>
+            <div>
+              <button>Login</button>
+            </div>
       </form>
     </div>
   )
