@@ -1,8 +1,18 @@
 import  express  from "express";
 import mongoose from "mongoose";
 import dotenv from 'dotenv'
+import adminRouter from "./routes/adminRoute.js";
+import cors from 'cors'
 dotenv.config()
 const app = express()
+app.use(express.json())
+app.use(
+    cors({
+        origin: 'http://localhost:5173',
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        allowedHeaders: ['Content-Type']
+    })
+)
 mongoose.connect(process.env.MONGO)
 .then(() => {
     app.listen(process.env.PORT, () => {
@@ -12,3 +22,4 @@ mongoose.connect(process.env.MONGO)
 .catch(error => {
     console.log('error connecting to the database', error)
 })
+app.use('/api/user', adminRouter)
