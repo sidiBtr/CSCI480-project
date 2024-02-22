@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import EventCalender from './pages/EventCalender'
 import AboutUs from './pages/AboutUs'
 import Admin from './pages/Admin'
+import AdminDashbord from './pages/AdminDashbord'
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/aboutUs' element={<AboutUs/>}/>
           <Route path='/events' element={<EventCalender/>}/>
-          <Route path='/admin' element= {<Admin/>}/>
+          <Route path='/login' element= {<Admin/>}/>
+          <Route path='/dashbord' element= {<AdminDashbord/>}/>
         </Routes>
       </Router>
     </div>
