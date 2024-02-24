@@ -4,7 +4,7 @@ export default function AdminDashbord() {
   return (
     <div>
       <h1>Admin Dashbord</h1>
-      this will private in the future
+      this will be private in the future
     </div>
   )
 }
