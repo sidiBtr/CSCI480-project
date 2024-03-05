@@ -3,8 +3,8 @@
     min-height: 100vh;
     margin: 0 auto;
     /*padding: 20px;*/
-    padding-top: 50px;
-    
+    padding-top: 60px;
+    text-align: center;
   }
 
 
@@ -12,6 +12,7 @@ h2{
     color: maroon;
     font-family: serif;
     text-align: center;
+    text-shadow: 1px 1px 1px black;
 }
 
 p{
@@ -22,4 +23,5 @@ p{
     font-size: 17px;
     font-family: serif;
     font-weight: 550;
+    line-height: 1.4;
 }
