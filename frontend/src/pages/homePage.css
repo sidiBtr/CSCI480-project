@@ -1,3 +1,4 @@
+
 .home-page-container {
   max-width: 800px;
   min-height: 100vh;
@@ -42,3 +43,79 @@ footer {
 footer p {
   margin: 5px 0;
 }
+html {
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.home-text {
+    max-width: 800px;
+    min-height: 100vh;
+    padding-top: 8em;
+    padding-left: 10em;
+  }
+
+  .home-text h1 {
+    font-size: 60px;
+    color: maroon;
+    margin-left: 3%;
+  }
+
+  .home-text .welcome {
+    font-size: 40px;
+  }
+
+  .home-text .club {
+    font-size: 50px;
+    color: maroon;
+    margin-left: 3%;
+  }
+  
+  .home-text p {
+    max-width: 800px;
+    font-size: 25px;
+    line-height: 150%;
+    margin-left: 5%;
+    padding-top: 2em;
+  }
+
+  .home-text a {
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+  }
+
+  .home-text a:hover {
+    color: maroon;
+  }
+  /*
+  @media (max-width: 600px) {
+    .home-page-container {
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    .content {
+      font-size: 1em;
+    }
+  }*/
+  footer {
+    margin-top: auto;
+    background: #080202;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  .social-media-icons {
+    /* Add styles for social media icons */
+  }
+  
+
