@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from 'dotenv'
 import adminRouter from "./routes/adminRoute.js";
 import cors from 'cors'
+import eventRouter from "./routes/eventsRoutes.js";
 dotenv.config()
 const app = express()
 app.use(express.json())
@@ -23,3 +24,4 @@ mongoose.connect(process.env.MONGO)
     console.log('error connecting to the database', error)
 })
 app.use('/api/user', adminRouter)
+app.use('/api/events', eventRouter)
