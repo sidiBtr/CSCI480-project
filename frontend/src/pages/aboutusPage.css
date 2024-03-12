@@ -12,7 +12,8 @@
     color: maroon;
     font-family: serif;
     text-align: center;
-    text-shadow: 1px 1px 1px black;
+    padding: 0;
+    overflow: hidden;
 }
 
 p{
