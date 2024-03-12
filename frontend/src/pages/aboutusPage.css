@@ -10,7 +10,7 @@
 
 .history-title{
     color: maroon;
-    font-family: serif;
+    font-family: Georgia;
     text-align: center;
     padding: 0;
     overflow: hidden;
@@ -20,9 +20,9 @@ p{
 
     text-align: center;
     color: black;
-    padding: 0 0 40px 0;
+    padding: 0 0 30px 0;
     font-size: 17px;
-    font-family: serif;
+    font-family: Helvetica;
     font-weight: 550;
-    line-height: 1.4;
+    line-height: 1.3;
 }
