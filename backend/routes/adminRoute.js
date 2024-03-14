@@ -2,6 +2,7 @@ import express from 'express'
 import { Admin } from '../model/adminModel.js'
 import bcrypt from 'bcrypt'
 import  Jwt  from 'jsonwebtoken'
+import { verifyToken } from '../verifyUser.js'
 
 const adminRouter = express.Router()
 adminRouter.post('/signup', async(req, res) => {
@@ -10,7 +11,7 @@ adminRouter.post('/signup', async(req, res) => {
         const { email, username, password} = req.body
         if(!username || ! email || ! password)
             return res.status(400).json({message: 'please send required fields'})
-        const user = await Admin.findOne({username})
+        const user = await Admin.findOne({email})
         if(user) return res.status(400).json({message: 'user already exist'})
         const hashedPassword = bcrypt.hashSync(password, 10)
         const adminUser = new Admin({username, email, password: hashedPassword })
@@ -29,6 +30,7 @@ adminRouter.post('/signin', async(req, res) => {
         if(!validAdmin) return res.status(401).json({message: 'wrong email'})
         const validPassword = bcrypt.compareSync(password, validAdmin.password)
         if(!validPassword) return res.status(401).json({message: 'wrong credential'})
+        const expiryDate = new Date(Date.now() + 3600000) // 1h
         const token = Jwt.sign({id: validAdmin._id}, process.env.JWT_SECRET)
         const {password: userPassword, ...rest} = validAdmin.toObject()
         return res.cookie('token', token, {httpOnly: true}).status(200).json(rest)

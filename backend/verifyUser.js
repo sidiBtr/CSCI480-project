@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 export const verifyToken = (req, res, next) => {
-    token = req.access_token
+    const token = req.cookies.token
     if(!token)
         return res.status(401).json({message: 'access denied need to login'})
     jwt.verify(token, process.env.JWT_SECRETE, (err, user) => {
