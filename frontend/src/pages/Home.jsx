@@ -5,6 +5,9 @@ import image from '../images/image.png'
 import help from '../images/help.png'
 import image035 from '../images/035.JPG'
 import image110 from '../images/110.JPG'
+import eagle from '../images/Eagle.JPG'
+import image141 from '../images/141.JPG'
+import image174 from '../images/174.JPG'
 
 export default function Home() {
   return (
@@ -14,7 +17,7 @@ export default function Home() {
       <div className="home-text">
         <h3 className="welcome">Welcome To</h3>
         <h1>Millstream</h1>
-        <h3 className="club">Woodcarvers Club!</h3>
+        <h3 className="club">Wood Carvers!</h3>
         <p>We welcome youth and adults from all walks of life from beginners 
         to experienced carvers who desire to learn more about wood carving and burning. 
         Our purpose is to promote wood carving and to share ideas and techniques of wood carving 
@@ -29,9 +32,22 @@ export default function Home() {
         </div>
       </div>
     </section>
+
+    <div className="gallery-container">
+    <section id="gallery">
+      <div className="images">
+        <img src={image} />
+        <img src={help} />
+        <img src={image035} />
+        <img src={eagle} />
+        <img src={image141} />
+        <img src={image174} />
+      </div>
+    </section>
+    </div>
     <footer>
-        <p>Millstream Woodcarvers Club</p>
-        <p>2230 Blanchard Avenue, Findlay, Ohio</p>
+        <p>Millstream Wood Carvers</p>
+        <p><Link to={"http://maps.apple.com/?q=2230+Blanchard+Ave,+Findlay+OH"}>2230 Blanchard Avenue, Findlay, Ohio</Link></p>
         <p>Connect with us:</p>
         <div className="social-media-icons">
           
