@@ -8,8 +8,8 @@ import image110 from '../images/110.JPG'
 
 export default function Home() {
   return (
-    <>
-    <section id="welcome-section">
+    <div className='home-container'>
+      <section id="welcome-section">
     <div className="img-text">
       <div className="home-text">
         <h3 className="welcome">Welcome To</h3>
@@ -37,7 +37,9 @@ export default function Home() {
           
         </div>
     </footer>
-    </>
+    </div>
+    
+    
     
   );
 }
