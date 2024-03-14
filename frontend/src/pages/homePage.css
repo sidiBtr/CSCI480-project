@@ -4,7 +4,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.home-container {
+#welcome-section {
   height: 100vh;
 }
 
@@ -69,69 +69,20 @@ html {
     display: flex;
     flex-direction: row;
   }
-
-  .gallery-container {
-    /*height: 100vh;*/
-  }
-
-  .images {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px 10px;
-  }
-
-  .images img {
-    width: 100%;
-    max-width: 350px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
+  /*
   @media (max-width: 600px) {
-    .home-image img {
-      width: 0%;
-      height: 0%;
+    .home-page-container {
+      padding: 10px;
     }
-
-    .images {
-      gap: 4px;
-      max-width: 400px;
-      padding: 2px 1px;
+  
+    h2 {
+      font-size: 1.5em;
     }
-
-    .images img {
-      max-width: 100px;
-      height: 80px;
-      border-radius: 5px;
+  
+    .content {
+      font-size: 1em;
     }
-    .home-text {
-      padding: 0;
-      text-align: center;
-    }
-
-    .home-text h1 {
-      font-size: 25px;
-    }
-
-    .home-text .welcome {
-      font-size: 20px;
-    }
-
-    .home-text .club {
-      font-size: 24px;
-    }
-
-    .home-text p {
-      font-size: 16px;
-    }
-  }
+  }*/
   footer {
     margin-top: auto;
     background: #080202;
@@ -142,16 +93,6 @@ html {
   
   footer p {
     margin: 5px 0;
-    color: white;
-  }
-
-  footer a {
-    text-decoration: underline;
-    color: white;
-  }
-
-  footer a:hover {
-    color: maroon;
   }
   
   .social-media-icons {
