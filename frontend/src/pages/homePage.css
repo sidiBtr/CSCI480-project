@@ -55,14 +55,16 @@ html {
 
   .home-image {
     display: flex;
-    padding-left: 8em;
-    padding-top: 11em;
+    padding-left: 3em;
+    padding-top: 12em;
+    max-width: 1400px;
   }
 
   .home-image img {
     position: absolute;
-    width: 25%;
-    height: 60%;
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
   }
 
   .img-text {
@@ -75,7 +77,10 @@ html {
     padding-top: 4em;
   }
 
-  
+  .gallery-text {
+    font-size: 24px;
+    text-align: center;
+  }
 
   .images {
     display: flex;
@@ -106,10 +111,35 @@ html {
     .home-text {
       padding-top: 4em;
       padding-left: 5em;
+      max-width: 600px;
+    }
+
+    .home-text h1 {
+      font-size: 30px;
+    }
+
+    .home-text .welcome {
+      font-size: 20px;
+    }
+
+    .home-text .club {
+      font-size: 25px;
     }
 
     .home-text p {
       font-size: 16px;
+    }
+
+    .home-image {
+      display: none;
+      max-width: 1px;
+      max-height: 1px;
+      padding: 0 0;
+    }
+
+    .home-image img {
+      max-width: 1px;
+      max-height: 1px;
     }
 
     .images {

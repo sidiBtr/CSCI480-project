@@ -8,6 +8,7 @@ import image110 from '../images/110.JPG'
 import eagle from '../images/Eagle.JPG'
 import image141 from '../images/141.JPG'
 import image174 from '../images/174.JPG'
+import tom from '../images/Tom Miller_edit.png'
 
 export default function Home() {
   return (
@@ -28,13 +29,14 @@ export default function Home() {
         </p>
         </div>
         <div className="home-image">
-        <img src={image110} />
+        <img src={tom} />
         </div>
       </div>
     </section>
 
     <div className="gallery-container">
     <section id="gallery">
+      <h3 className="gallery-text">Some of Our Work:</h3>
       <div className="images">
         <img src={image} />
         <img src={help} />
