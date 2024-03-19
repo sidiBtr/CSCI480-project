@@ -1,13 +1,11 @@
 .about-us-container {
-    
-
     /* Image CSS*/
     background-image: url(../images/image.png);
-    background-size: cover; /* Change to cover */
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.8;
-    background-attachment: fixed; /* Optional, to keep the background fixed while scrolling */
+    background-attachment: fixed; 
 }
 
 .paragraph{
