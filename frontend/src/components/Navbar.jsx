@@ -1,15 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import  './NavBarStyle.css'
-import logo from '../images/Untitled.svg'
+import logo from '../images/logo.png'
 
 export default function Navbar() {
   return (
+    <div className="nav">
+      <Link to={'/'}>
+        <img src={logo} className="logo"/>
+      </Link>
       <nav className='navbar'>
         <ul>
-            <Link to={'/'}>
+            {/*<Link to={'/'}>
             <li><img src={logo} /></li>
-            </Link>
+            </Link>*/}
             <Link to={'/events'}>
             <li>Events</li>
             </Link>
@@ -24,5 +28,7 @@ export default function Navbar() {
            </Link>
         </ul>
       </nav>
+      <div className="clear"></div>
+    </div>
   )
 }
