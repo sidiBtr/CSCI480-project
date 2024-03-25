@@ -35,3 +35,31 @@
 .navbar a:hover {
     color: maroon;
 }
+
+@media (max-width: 600px) {
+    .logo {
+        height: 25px;
+        width: 50px;
+    }
+
+    .navbar li {
+        padding: 5px 4px 5px 4px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 7px 8px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .logo {
+        height: 60px;
+        width: 100px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        padding: 9px 12px;
+    }
+}
