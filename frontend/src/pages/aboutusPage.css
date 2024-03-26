@@ -1,10 +1,10 @@
 .about-us-container {
     /* Image CSS*/
-    background-image: url(../images/image.png);
+    background-image: url(../images/Painted_Edit4.PNG);
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.8;
+    opacity: .85;
     background-attachment: fixed; 
 }
 
@@ -14,6 +14,7 @@
     margin: 0 auto;
     /*padding: 20px;*/
     padding-top: 55px;
+    color:darkgray;
 
 }
 
