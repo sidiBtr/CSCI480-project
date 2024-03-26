@@ -4,16 +4,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/*#welcome-section {
-  height: 100vh;
-}*/
-.home-container {
+#welcome-section {
   height: 100vh;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
+.home-container {
+  display: block;
+  padding-bottom: 4em;
 }
 
 .home-text {
@@ -58,34 +55,152 @@ html {
 
   .home-image {
     display: flex;
-    padding-left: 8em;
-    padding-top: 11em;
+    padding-left: 3em;
+    padding-top: 12em;
+    max-width: 1400px;
   }
 
   .home-image img {
     position: absolute;
-    width: 25%;
-    height: 60%;
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
   }
 
   .img-text {
     display: flex;
     flex-direction: row;
   }
-  /*
+
+  .gallery-container {
+    display: block;
+    padding-top: 2em;
+  }
+
+  .gallery-text {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+
+  .images img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .images::after {
+    content: "";
+    width: 350px;
+  }
+
   @media (max-width: 600px) {
-    .home-page-container {
-      padding: 10px;
+    .home-container {
+      min-width: 600px;
     }
-  
-    h2 {
-      font-size: 1.5em;
+
+    .home-text {
+      padding-top: 4em;
+      margin-right: 10em;
+      text-align: center;
     }
-  
-    .content {
-      font-size: 1em;
+
+    .home-text h1 {
+      font-size: 35px;
     }
-  }*/
+
+    .home-text .welcome {
+      font-size: 25px;
+    }
+
+    .home-text .club {
+      font-size: 30px;
+    }
+
+    .home-text p {
+      font-size: 18px;
+    }
+
+    .home-image {
+      display: none;
+      max-width: 1px;
+      max-height: 1px;
+      padding: 0 0;
+    }
+
+    .home-image img {
+      max-width: 1px;
+      max-height: 1px;
+    }
+
+    .images {
+      gap: 6px;
+      padding: 15px 7px;
+    }
+
+    .images img {
+      max-width: 140px;
+      height: 120px;
+    }
+
+    .gallery-text {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 1000px) and (min-width: 601px) {
+
+    .home-text {
+      padding-top: 4em;
+      padding-left: 8em;
+    }
+
+    .home-text p {
+      font-size: 20px;
+      line-height: 150%;
+    }
+
+    .home-text h1 {
+      font-size: 35px;
+    }
+
+    .home-text .welcome {
+      font-size: 30px;
+    }
+
+    .home-text .club {
+      font-size: 32px;
+    }
+
+    .home-image {
+      max-width: 700px;
+      padding-top: 8em;
+    }
+
+    .home-image img {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .gallery-container {
+      padding-top: 20px;
+    }
+  }
+
+
   footer {
     margin-top: auto;
     background: #080202;
@@ -96,6 +211,16 @@ html {
   
   footer p {
     margin: 5px 0;
+    color: white;
+  }
+
+  footer a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  footer a:hover {
+    color: maroon;
   }
   
   .social-media-icons {
