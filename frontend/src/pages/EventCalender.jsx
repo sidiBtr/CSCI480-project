@@ -51,6 +51,7 @@ export default function EventCalender() {
       ) : (
         event.map((ev) => (
           <Event key={ev._id} event={{ ...ev, date: formatDate(ev.date) }}/>
+          
         ))
       )}
     </div>

@@ -5,6 +5,7 @@ import adminRouter from "./routes/adminRoute.js";
 import cors from 'cors'
 import eventRouter from "./routes/eventsRoutes.js";
 dotenv.config()
+
 const app = express()
 app.use(express.json())
 app.use(
@@ -14,6 +15,7 @@ app.use(
         allowedHeaders: ['Content-Type']
     })
 )
+app.use('/uploads', express.static('uploads'));
 mongoose.connect(process.env.MONGO)
 .then(() => {
     app.listen(process.env.PORT, () => {

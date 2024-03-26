@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './admin.css';
+import './login.css';
 import { useNavigate } from 'react-router-dom';
 
-export default function Admin() {
-  const [adminInfos, setAdminInfo] = useState({});
+export default function Login() {
+    const [adminInfos, setAdminInfo] = useState({});
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ export default function Admin() {
 
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5555/api/user/signup', {
+      const response = await fetch('http://localhost:5555/api/user/signin', {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify(adminInfos),
@@ -48,27 +48,19 @@ export default function Admin() {
         throw new Error('An error occurred', response.status);
       }
       const data = await response.json();
-      console.log('Successful sign up');
+      console.log(data)
+      console.log('Successful login');
       setLoading(false);
-      navigate('/login');
+      navigate('/dashboard');
     } catch (error) {
       console.log(error);
       setLoading(false);
     }
   };
-
   return (
     <div className='admin-parent-container'>
       <div className='admin-container'>
       <form onSubmit={handleSubmit} className='admin-form'>
-        <input
-          onChange={handleChange}
-          type='text'
-          id='username'
-          required
-          placeholder='Username'
-          className='admin-input'
-        />
         <input
           onChange={handleChange}
           type='email'
@@ -88,11 +80,11 @@ export default function Admin() {
         />
         {errors.password && <p className='error'>{errors.password}</p>}
         <div className='button-container'>
-          <button className='submit-button'>{loading ? '.....' : 'Sign Up'}</button>
+          <button className='submit-button'>{loading ? '.....' : 'login'}</button>
         </div>
       </form>
     </div>
     </div>
     
-  );
+  )
 }
