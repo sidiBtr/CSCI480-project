@@ -51,7 +51,7 @@ export default function Login() {
       console.log(data)
       console.log('Successful login');
       setLoading(false);
-      navigate('/dashboard');
+      navigate('/');
     } catch (error) {
       console.log(error);
       setLoading(false);
