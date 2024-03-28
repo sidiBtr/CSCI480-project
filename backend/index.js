@@ -12,10 +12,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename); 
 const app = express()
 app.use(express.json())
-//app.use(cors())
+app.use(cors())
+// 'http://localhost:5173'
 app.use(
     cors({
-        origin: ['https://mswoodcarving.onrender.com', 'http://localhost:5173'],
+        origin: ['https://mswoodcarving.onrender.com'],
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type']
     })
