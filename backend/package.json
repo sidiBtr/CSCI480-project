@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "prod": "NODE_ENV=production nodemon server.js",
-    "build": "npm install --prefix ../frontend && npm run build --prefix ../frontend"
+    "prod": "NODE_ENV=production nodemon index.js",
+    "build": "npm install --prefix ../frontend && npm run build --prefix ../frontend && npm install"
   },
   "keywords": [],
   "author": "",
