@@ -49,7 +49,7 @@ export default function Home() {
     </section>
     </div>
     <footer>
-        <p>Millstream Wood Carvers</p>
+        <p>WIR GEBEN HOLZ LEBEN</p>
         <p><Link to={"http://maps.apple.com/?q=2230+Blanchard+Ave,+Findlay+OH"}>2230 Blanchard Avenue, Findlay, Ohio</Link></p>
         <p>Connect with us:</p>
         <div className="social-media-icons">
