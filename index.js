@@ -1,9 +1,9 @@
 import  express  from "express";
 import mongoose from "mongoose";
 import dotenv from 'dotenv'
-import adminRouter from "./routes/adminRoute.js";
+import adminRouter from "./backend/routes/adminRoute.js"
 import cors from 'cors'
-import eventRouter from "./routes/eventsRoutes.js";
+import eventRouter from "./backend/routes/eventsRoutes.js"
 dotenv.config()
 import cookieParser from "cookie-parser";
 import path from 'path'
