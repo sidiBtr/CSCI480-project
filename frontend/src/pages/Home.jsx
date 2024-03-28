@@ -8,7 +8,7 @@ import eagle from '../images/Eagle.JPG'
 import image141 from '../images/141.JPG'
 import image174 from '../images/174.JPG'
 import tom from '../images/Tom Miller_edit.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+{/*import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' */}
 
 
 export default function Home() {
