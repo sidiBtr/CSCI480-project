@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './homePage.css'
-import image from '../images/image.png'
-import help from '../images/help.png'
+import image from '../images/DSC_0814 2.JPG'
+import instrument from '../images/71H_8539.JPG'
 import image035 from '../images/035.JPG'
-import image110 from '../images/110.JPG'
 import eagle from '../images/Eagle.JPG'
 import image141 from '../images/141.JPG'
 import image174 from '../images/174.JPG'
 import tom from '../images/Tom Miller_edit.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
       <h3 className="gallery-text">Some of Our Work:</h3>
       <div className="images">
         <img src={image} />
-        <img src={help} />
+        <img src={instrument} />
         <img src={image035} />
         <img src={eagle} />
         <img src={image141} />
@@ -52,7 +53,11 @@ export default function Home() {
         <p><Link to={"http://maps.apple.com/?q=2230+Blanchard+Ave,+Findlay+OH"}>2230 Blanchard Avenue, Findlay, Ohio</Link></p>
         <p>Connect with us:</p>
         <div className="social-media-icons">
-          
+        <ul>
+          <li>Email</li>
+          <li>Phone</li>
+          <li>Facebook</li>
+        </ul>
         </div>
     </footer>
     </div>

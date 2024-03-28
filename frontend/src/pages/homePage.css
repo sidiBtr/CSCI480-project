@@ -206,6 +206,10 @@ html {
         content: "";
         width: 350px;
       }
+
+      footer p {
+        font-size: 12px;
+      }
   }
 
   @media (max-width: 1000px) and (min-width: 651px) {
