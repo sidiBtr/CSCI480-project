@@ -13,10 +13,10 @@ const __dirname = path.dirname(__filename);
 const app = express()
 app.use(express.json())
 app.use(cors())
-// 'http://localhost:5173'
+// ''
 app.use(
     cors({
-        origin: ['https://mswoodcarving.onrender.com'],
+        origin: ['http://localhost:5173'],
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type']
     })
