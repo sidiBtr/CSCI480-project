@@ -8,10 +8,8 @@
 .navbar {
     background-color: transparent;
     padding: 2px;
-    /*position: sticky;
-    top: 0;
-    z-index: 20;*/
 }
+
 .navbar ul {
     display: flex;
     align-items: center;
@@ -46,10 +44,10 @@
     color: maroon;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     .logo {
-        height: 25px;
-        width: 50px;
+        height: 34px;
+        width: 60px;
     }
 
     .navbar li {
@@ -57,12 +55,12 @@
     }
 
     .navbar a {
-        font-size: 12px;
-        padding: 7px 8px;
+        font-size: 10px;
+        padding: 3px 4px;
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1000px) and (min-width: 651px) {
     .logo {
         height: 60px;
         width: 100px;
