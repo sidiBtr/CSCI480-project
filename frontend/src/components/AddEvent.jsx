@@ -26,7 +26,7 @@ const AddEvent = ({ onClose, onOutsideClick }) => {
       formData.append('startTime', eventInfos.startTime);
       formData.append('endTime', eventInfos.endTime);
 
-      const response = await fetch("http://localhost:5555/api/events/create_event", {
+      const response = await fetch("http://localhost:3000/api/events/create_event", {
         method: 'POST',
         body: formData
       });

@@ -15,7 +15,7 @@ const AdminDashboard = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await fetch("http://localhost:5555/api/events/allEvents");
+      const response = await fetch("http://localhost:3000/api/events/allEvents");
       if (!response.ok) {
         throw new Error('Failed to fetch events');
       }
@@ -40,7 +40,7 @@ const AdminDashboard = () => {
 
   const handleDeleteEvent = async (eventId) => {
     try {
-      const response = await fetch(`http://localhost:5555/api/events/deleteEvent/${eventId}`, {
+      const response = await fetch(`http://localhost:3000/api/events/deleteEvent/${eventId}`, {
         method: 'DELETE'
       });
       if (!response.ok) {
@@ -56,7 +56,7 @@ const AdminDashboard = () => {
   const handleEditEvent = async (eventId, editedEvent) => {
     try {
       console.log('edited event in AdminDashboard.jsx:', editedEvent);
-      const response = await fetch(`http://localhost:5555/api/events/updateEvent/${eventId}`, {
+      const response = await fetch(`http://localhost:3000/api/events/updateEvent/${eventId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

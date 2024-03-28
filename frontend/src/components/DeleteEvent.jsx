@@ -10,7 +10,7 @@ export default function DeleteEvent() {
         const deleteEvent = async() => {
             try{
                 setLoading(true)
-                const response = await fetch(`http://localhost:5555/api/events/deleteEvent/${id}`, {
+                const response = await fetch(`http://localhost:3000/api/events/deleteEvent/${id}`, {
                     method: 'DELETE',
                 })
                 if(!response.ok){
