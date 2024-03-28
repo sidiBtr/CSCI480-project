@@ -5,21 +5,28 @@ import adminRouter from "./routes/adminRoute.js";
 import cors from 'cors'
 import eventRouter from "./routes/eventsRoutes.js";
 dotenv.config()
-
+import cookieParser from "cookie-parser";
+import path from 'path'
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url); 
+const __dirname = path.dirname(__filename); 
 const app = express()
 app.use(express.json())
-app.use(
+app.use(cors())
+/*app.use(
     cors({
         origin: 'http://localhost:5173',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type']
     })
-)
+)*/
 app.use('/uploads', express.static('uploads'));
+app.use(cookieParser())
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
 mongoose.connect(process.env.MONGO)
 .then(() => {
     app.listen(process.env.PORT, () => {
-        console.log('succssfull connection to the database', process.env.PORT)
+        console.log('app is listening on port', process.env.PORT)
     })
 })
 .catch(error => {

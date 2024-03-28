@@ -31,7 +31,7 @@ adminRouter.post('/signin', async(req, res) => {
         const validPassword = bcrypt.compareSync(password, validAdmin.password)
         if(!validPassword) return res.status(401).json({message: 'wrong credential'})
         const expiryDate = new Date(Date.now() + 3600000) // 1h
-        const token = Jwt.sign({id: validAdmin._id}, process.env.JWT_SECRET)
+        const token = Jwt.sign({id: validAdmin._id}, process.env.JWT_SECRET, {expiresIn: 3*24*60*60,})
         const {password: userPassword, ...rest} = validAdmin.toObject()
         return res.cookie('token', token, {httpOnly: true}).status(200).json(rest)
     } catch(error){
@@ -43,7 +43,7 @@ adminRouter.get('/admins', async(req, res) => {
     try{
         const admins = await Admin.find({})
         if(!admins) return res.status(401).json({message: 'no users found'})
-        return res.status(200).json({count: admins.length, admins})
+            return res.status(200).json({count: admins.length, admins})
     }catch(error){
         console.log(error)
     }
