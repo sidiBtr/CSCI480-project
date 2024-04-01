@@ -8,7 +8,6 @@ import eagle from '../images/Eagle.JPG'
 import image141 from '../images/141.JPG'
 import image174 from '../images/174.JPG'
 import tom from '../images/Tom Miller_edit.png'
-{/* ../images/Painted_Edit7.PNG*/}
 
 
 export default function Home() {
