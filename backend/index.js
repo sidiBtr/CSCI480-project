@@ -13,15 +13,14 @@ const __dirname = path.dirname(__filename);
 const app = express()
 app.use(express.json())
 app.use(cors())
-// ''
+// 'https://mswoodcarving.onrender.com'
 app.use(
     cors({
-        origin: ['http://localhost:5173'],
+        origin: 'http://localhost:5173',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type']
     })
 )
-app.use('/uploads', express.static('/uploads'));
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 mongoose.connect(process.env.MONGO)

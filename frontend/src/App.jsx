@@ -5,7 +5,6 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import EventCalender from './pages/EventCalender'
 import AboutUs from './pages/AboutUs'
-import Admin from './pages/Admin'
 import AdminDashbord from './pages/AdminDashbord'
 import Login from './pages/Login'
 
@@ -19,7 +18,6 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/aboutUs' element={<AboutUs/>}/>
           <Route path='/events' element={<EventCalender/>}/>
-          <Route path='/signUp' element= {<Admin/>}/>
           <Route path='/login' element={<Login/>} />
           <Route path='/dashbord' element={<AdminDashbord/>}/>
         </Routes>

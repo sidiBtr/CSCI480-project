@@ -20,9 +20,6 @@ export default function Navbar() {
            <Link to={'/aboutUs'}>
            <li>About Us</li>
            </Link>
-           <Link to={'/signUp'}>
-           <li>signUp</li>
-           </Link>
            <Link to={'/dashbord'}>
            <li>Admin</li>
            </Link>

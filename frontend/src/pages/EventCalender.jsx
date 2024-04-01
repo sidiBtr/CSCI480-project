@@ -3,7 +3,7 @@ import './eventscalenderPage.css'
 import Event from '../components/Event'
 
 export default function EventCalender() {
-  const[event, setEvent] = useState([])
+  const[events, setEvent] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   useEffect(() => {
@@ -44,16 +44,15 @@ export default function EventCalender() {
   return (
     <div className='events-container'>
       <h2 className='event-page-title'>Events Calendar</h2>
-      {loading ? (
-        <p>Loading...</p>
-      ) : error ? (
-        <p>Error: {error}</p>
-      ) : (
-        event.map((ev) => (
-          <Event key={ev._id} event={{ ...ev, date: formatDate(ev.date) }}/>
-          
-        ))
-      )}
+      <div className={events.length > 0 ? 'events-list' : 'events-list empty'}>
+        {loading ? (
+          <p>Loading...</p>
+        ) : error ? (
+          <p>Error: {error}</p>
+        ) : events.map((event) => (
+          <Event key={event._id} event={{ ...event, date: formatDate(event.date) }} />
+        ))}
+      </div>
     </div>
   );
 }

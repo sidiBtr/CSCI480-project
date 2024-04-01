@@ -48,4 +48,33 @@ adminRouter.get('/admins', async(req, res) => {
         console.log(error)
     }
 })
+// delete an admin user
+adminRouter.delete('/delete/:id', async(req, res) => {
+    const {id} = req.params
+    try{
+        const result = await Admin.findByIdAndDelete(id)
+        if(!result) return res.status(400).json({message: 'user not found'})
+        return res.status(200).json({message: "user deleted successfully"})
+    }catch(error){
+        console.log(error)
+    }
+})
+// edit an event
+adminRouter.put('/update/:id', async(req, res) => {
+    const {username, email, password} = req.body
+    const {id} = req.params
+    try{
+        if(!username ||!email||!password) return res.status(400).json({message: 'pleasse send all fields'})
+        const updateFields = {
+            username,
+            email,
+            password
+    }
+        const result = await Admin.findByIdAndUpdate(id, updateFields, {new: true})
+        if(!result) return res.status(400).json({message: 'no user found'})
+        return res.status(200).json({message: 'user updated successfully'})
+    } catch(error){
+        console.log(error)
+    }
+})
 export default adminRouter;

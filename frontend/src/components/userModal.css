@@ -1,0 +1,137 @@
+.admin-modal {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .admin-modal-content {
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 400px;
+    border-radius: 5px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .close-admin {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .email {
+    color: black;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  .close-admin:hover,
+  .close-admin:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .admin-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+  
+  .admin-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .edit-button,
+  .delete-button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-button:hover,
+  .delete-button:hover {
+    background-color: #45a049;
+  }
+  
+  .edit-button:focus,
+  .delete-button:focus {
+    outline: none;
+  }
+  .edit-user-modal {
+    position: fixed;
+    z-index: 101; /* On top of admin modal */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .edit-user-modal-content {
+    position: relative;
+    background-color: white;
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 400px;
+  }
+  
+  .edit-modal-buttons {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cancel-button,
+  .save-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cancel-button {
+    background-color: #aaa;
+    color: white;
+  }
+  
+  .save-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .cancel-button:hover {
+    background-color: #999;
+  }
+  
+  .save-button:hover {
+    background-color: #45a049;
+  }
+  
+  .cancel-button:focus,
+  .save-button:focus {
+    outline: none;
+  }
+  
