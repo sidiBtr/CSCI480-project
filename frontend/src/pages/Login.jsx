@@ -49,9 +49,11 @@ export default function Login() {
       }
       const data = await response.json();
       console.log(data)
+      localStorage.setItem('token',data.token)
+      console.log(data.token)
       console.log('Successful login');
       setLoading(false);
-      navigate('/');
+      navigate('/dashbord');
     } catch (error) {
       console.log(error);
       setLoading(false);

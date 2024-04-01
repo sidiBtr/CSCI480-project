@@ -4,8 +4,10 @@ import EventAdmin from '../components/EventAdmin';
 import UsersModal from '../components/UsersModal'
 import './eventDasbord.css';
 import AddUser from '../components/AddUser';
+import { useNavigate } from 'react-router-dom';
 
 const AdminDashboard = () => {
+  const navigate = useNavigate()
   const [events, setEvents] = useState([]);
   const [adminUsers, setAdminUsers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -139,6 +141,10 @@ const AdminDashboard = () => {
       console.error(error);
     }
   };
+  const handleLogout =() => {
+    localStorage.removeItem('token')
+    navigate('/login')
+  }
 
   return (
     <div className="admin-dashboard">
@@ -147,6 +153,7 @@ const AdminDashboard = () => {
           <div className="dashboard-button" onClick={handleAddEventClick}>Add Event</div>
           <div className="dashboard-button" onClick={handleClickAdmins}>Admins</div>
           <div className='dashboard-button' onClick={handleAddUserClick}>Add User</div>
+          <div className='dashboard-button' onClick={handleLogout} >Log out</div>
         </div>
       </div>
       {showAddEventModal && <AddEvent onClose={handleCloseAddEventModal} />}

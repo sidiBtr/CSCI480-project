@@ -20,11 +20,11 @@ export default function Navbar() {
            <Link to={'/aboutUs'}>
            <li>About Us</li>
            </Link>
-           <Link to={'/dashbord'}>
-           <li>Admin</li>
-           </Link>
            <Link to={'/login'}>
            <li>login</li>
+           </Link>
+           <Link to={'/dashbord'}>
+           <li>admin</li>
            </Link>
         </ul>
       </nav>

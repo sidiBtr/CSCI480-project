@@ -14,11 +14,13 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 // 'https://mswoodcarving.onrender.com'
+//'http://localhost:5173'
 app.use(
     cors({
         origin: 'https://mswoodcarving.onrender.com',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowedHeaders: ['Content-Type']
+        allowedHeaders: ['Content-Type'],
+        credentials: true
     })
 )
 app.use(cookieParser())

@@ -2,6 +2,8 @@ import express from 'express'
 import { Admin } from '../model/adminModel.js'
 import bcrypt from 'bcrypt'
 import  Jwt  from 'jsonwebtoken'
+import dotenv from 'dotenv'
+dotenv.config()
 import { verifyToken } from '../verifyUser.js'
 
 const adminRouter = express.Router()
@@ -30,10 +32,9 @@ adminRouter.post('/signin', async(req, res) => {
         if(!validAdmin) return res.status(401).json({message: 'wrong email'})
         const validPassword = bcrypt.compareSync(password, validAdmin.password)
         if(!validPassword) return res.status(401).json({message: 'wrong credential'})
-        const expiryDate = new Date(Date.now() + 3600000) // 1h
-        const token = Jwt.sign({id: validAdmin._id}, process.env.JWT_SECRET, {expiresIn: 3*24*60*60,})
-        const {password: userPassword, ...rest} = validAdmin.toObject()
-        return res.cookie('token', token, {httpOnly: true}).status(200).json(rest)
+        const token = Jwt.sign({id: validAdmin._id}, process.env.JWT_SECRET, {expiresIn: '1h'},)
+        //res.cookie('token', token, {httpOnly: false, sameSite: 'lax', secure: false})
+        res.status(200).json({email: validAdmin.email, username: validAdmin.username, token})
     } catch(error){
         console.log(error)
     }
@@ -76,5 +77,13 @@ adminRouter.put('/update/:id', async(req, res) => {
     } catch(error){
         console.log(error)
     }
+})
+// log out 
+adminRouter.post('/logout', (req, res) => {
+    res.cookie('token', '', {
+        httpOnly: true,
+        expiresIn: new Date(0)
+    })
+    res.status(200).json({message: 'logged out successfully'})
 })
 export default adminRouter;
