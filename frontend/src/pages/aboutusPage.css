@@ -1,6 +1,6 @@
 .about-us-container {
     /* Image CSS*/
-    background-image: url('../images/Painted_Edit7.PNG');
+    background-image: url('../images/Painted_Edit9.png');
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
@@ -9,6 +9,7 @@
   -webkit-text-stroke-color: black;
 
 }
+
 
 .paragraph{
     max-width: 800px;
