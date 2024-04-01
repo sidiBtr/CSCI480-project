@@ -16,7 +16,7 @@ app.use(cors())
 // 'https://mswoodcarving.onrender.com'
 app.use(
     cors({
-        origin: 'http://localhost:5173',
+        origin: 'https://mswoodcarving.onrender.com',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type']
     })
