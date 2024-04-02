@@ -1,11 +1,11 @@
 .about-us-container {
     /* Image CSS*/
-    background-image: url("../../dist/assets/Painted_Edit7-iTI6oT5N.png");
+    background-image: url("../../dist/assets/Painted_Edit15.png");
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; 
-    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-width: .45px;
   -webkit-text-stroke-color: black;
 
 }
