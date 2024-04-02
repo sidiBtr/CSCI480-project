@@ -22,7 +22,9 @@
   
   .close {
     color: #aaa;
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
