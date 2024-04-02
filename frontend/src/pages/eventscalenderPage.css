@@ -6,7 +6,10 @@
 
 .event-page-title {
   font-size: 24px;
+  font-weight: 800;
   margin-bottom: 20px;
+  text-align: center;
+  color: black;
 }
 
 .events-list {

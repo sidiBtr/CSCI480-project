@@ -74,8 +74,8 @@ export default function EventAdmin({ event, onDelete, onEdit }) {
             <textarea name="description" value={editedEvent.description} onChange={handleChange} placeholder="Event Description" required></textarea>
             <input type="text" name="startTime" value={formatTime(editedEvent.startTime)} onChange={handleChange} placeholder="Start Time" required />
             <input type="text" name="endTime" value={formatTime(editedEvent.endTime)} onChange={handleChange} placeholder="End Time" required />
-            <button type="button" onClick={handleCancelEdit}>Cancel</button>
-            <button type="submit">Save</button>
+            <button className='cancel-btn' type="button" onClick={handleCancelEdit}>Cancel</button>
+            <button className='cancel-btn' type="submit">Save</button>
           </form>
         </div>
       )}

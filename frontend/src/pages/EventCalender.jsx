@@ -43,7 +43,7 @@ export default function EventCalender() {
 
   return (
     <div className='events-container'>
-      <h2 className='event-page-title'>Events Calendar</h2>
+      <h2 className='event-page-title'>Upcoming Events</h2>
       <div className={events.length > 0 ? 'events-list' : 'events-list empty'}>
         {loading ? (
           <p>Loading...</p>
