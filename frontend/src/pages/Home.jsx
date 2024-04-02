@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './homePage.css'
 import image from '../images/DSC_0814 2.JPG'
-import instrument from '../images/71H_8539.JPG'
-import image035 from '../images/035.JPG'
+import painted from '../images/new.JPG'
+import image416 from '../images/416.JPG'
 import eagle from '../images/Eagle.JPG'
 import image141 from '../images/141.JPG'
 import image174 from '../images/174.JPG'
@@ -25,11 +25,10 @@ export default function Home() {
         in Northwestern Ohio. The club offers a carving resource center for classes, power equipment, 
         tools, wood supply, a resource library and weekly fellowship among members 
         at our clubhouse at open carving sessions and scheduled events. 
-        The clubhouse is located at <Link to={"http://maps.apple.com/?q=2230+Blanchard+Ave,+Findlay+OH"}>2230 Blanchard Avenue in Findlay, Ohio.</Link>
         </p>
         </div>
         <div className="home-image">
-        <img src={tom} />
+        <img title="Our founder Tom Miller" src={tom} alt="Our founder Tom Miller"/>
         </div>
       </div>
     </section>
@@ -38,12 +37,12 @@ export default function Home() {
     <section id="gallery">
       <h3 className="gallery-text">Some of Our Work:</h3>
       <div className="images">
-        <img src={image} />
-        <img src={instrument} />
-        <img src={image035} />
-        <img src={eagle} />
-        <img src={image141} />
-        <img src={image174} />
+        <img src={image} alt="Antler with fish design inside"/>
+        <img src={painted} alt="A painted caricature carving"/>
+        <img src={image416} alt="Wood engraved shield"/>
+        <img src={eagle} alt="Wood burned eagle"/>
+        <img src={image141} alt="Wood carved Native American"/>
+        <img src={image174} alt="Wood carved cross"/>
       </div>
     </section>
     </div>
@@ -52,11 +51,8 @@ export default function Home() {
         <p><Link to={"http://maps.apple.com/?q=2230+Blanchard+Ave,+Findlay+OH"}>2230 Blanchard Avenue, Findlay, Ohio</Link></p>
         <p>Connect with us:</p>
         <div className="social-media-icons">
-        <ul>
-          <li>Email</li>
-          <li>Phone</li>
-          <li>Facebook</li>
-        </ul>
+        <p>Email</p>
+        <p>Facebook</p>
         </div>
     </footer>
     </div>

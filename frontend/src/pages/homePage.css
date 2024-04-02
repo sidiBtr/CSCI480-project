@@ -275,7 +275,11 @@ html {
   }
   
   .social-media-icons {
-    /* Add styles for social media icons */
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    gap: 16px;
   }
   
 
