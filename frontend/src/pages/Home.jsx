@@ -12,6 +12,7 @@ import tom from '../images/Tom Miller_edit.png'
 
 export default function Home() {
   return (
+    <div>
     <div className='home-container'>
       <section id="welcome-section">
     <div className="img-text">
@@ -37,7 +38,7 @@ export default function Home() {
     <section id="gallery">
       <h3 className="gallery-text">Some of Our Work:</h3>
       <div className="images">
-        <img src={image} alt="Antler with fish design inside"/>
+        <img src={image} alt="Antler with fish design inside" />
         <img src={painted} alt="A painted caricature carving"/>
         <img src={image416} alt="Wood engraved shield"/>
         <img src={eagle} alt="Wood burned eagle"/>
@@ -46,18 +47,16 @@ export default function Home() {
       </div>
     </section>
     </div>
+    </div>
     <footer>
         <p>WIR GEBEN HOLZ LEBEN</p>
         <p><Link to={"http://maps.apple.com/?q=2230+Blanchard+Ave,+Findlay+OH"}>2230 Blanchard Avenue, Findlay, Ohio</Link></p>
         <p>Connect with us:</p>
         <div className="social-media-icons">
-        <p>Email</p>
-        <p>Facebook</p>
+        <p><a href="mailto: MSWoodcarvers@gmail.com" target="_blank"><i class="fa-lg fa-regular fa-envelope"></i></a></p>
+        <p><a href="https://www.facebook.com/profile.php?id=100057580174293" target="_blank"><i class="fa-lg fa-brands fa-facebook"></i></a></p>
         </div>
     </footer>
     </div>
-    
-    
-    
   );
 }
