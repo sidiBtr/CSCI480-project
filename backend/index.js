@@ -20,7 +20,6 @@ app.use(
         origin: 'https://mswoodcarving.onrender.com',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type'],
-        credentials: true
     })
 )
 app.use(cookieParser())
