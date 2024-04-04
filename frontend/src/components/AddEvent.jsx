@@ -13,7 +13,7 @@ const AddEvent = ({ onClose, onOutsideClick }) => {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:3000/api/events/create_event", {
+      const response = await fetch("https://mswoodcarving.onrender.com/api/events/create_event", {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify(eventInfos)
