@@ -29,7 +29,7 @@ export default function AboutUs() {
          <p>
           It is through the original generosity of Mr. Thomas O. Miller and the subsequent unselfish contributions of its members that 
           has allowed the Millstream Wood Carvers to continue to flourish in a spacious and comfortable environment,
-          dedicated to share their enthusiasm for woodcarving to anyone who is interested.
+          dedicated to share their enthusiasm for wood carving to anyone who is interested.
          </p>
         </div>
     </div>
