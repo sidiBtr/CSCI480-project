@@ -236,26 +236,33 @@ html {
       font-size: 32px;
     }
 
-    .home-image {
-      max-width: 700px;
-      padding-top: 8em;
-    }
-
-    .home-image img {
-      width: 100%;
-      max-width: 300px;
-    }
-
     .gallery-container {
       padding-top: 20px;
     }
   }
 
+  @media (max-width: 1400px) {
+    .home-image {
+      display: none;
+      padding-left: 0em;
+      padding-top: 0em;
+      max-width: 0%;
+    }
+  
+    .home-image img {
+      position: relative;
+      width: 0%;
+      max-width: 0%;
+      object-fit: cover;
+    }
+  }
+
 
   footer {
+    bottom: 0;
     margin-top: auto;
     background: #080202;
-    padding: 10px 20px;
+    padding: 10px 10px;
     width: 100%;
     box-sizing: border-box;
   }
