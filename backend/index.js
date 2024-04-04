@@ -17,7 +17,7 @@ app.use(express.json())
 //https://mswoodcarving.onrender.com
 app.use(
     cors({
-        origin: '*',
+        origin: 'https://mswoodcarving.onrender.com',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type'],
     })
