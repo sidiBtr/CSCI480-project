@@ -15,9 +15,10 @@ app.use(express.json())
 app.use(cors())
 // 'https://mswoodcarving.onrender.com'
 //'http://localhost:5173'
+//https://mswoodcarving.onrender.com
 app.use(
     cors({
-        origin: 'https://mswoodcarving.onrender.com',
+        origin: '*',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type'],
     })
