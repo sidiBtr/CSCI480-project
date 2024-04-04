@@ -82,7 +82,7 @@ export default function Login() {
         />
         {errors.password && <p className='error'>{errors.password}</p>}
         <div className='button-container'>
-          <button className='submit-button'>{loading ? '.....' : 'login'}</button>
+          <button className='submit-button'>{loading ? '.....' : 'Login'}</button>
         </div>
       </form>
     </div>
