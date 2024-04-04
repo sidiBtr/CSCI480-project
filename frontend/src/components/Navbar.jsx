@@ -21,7 +21,7 @@ export default function Navbar() {
            <li>About Us</li>
            </Link>
            <Link to={'/login'}>
-           <li>login</li>
+           <li>Login</li>
            </Link>
         </ul>
       </nav>
