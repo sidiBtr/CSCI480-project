@@ -12,7 +12,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename); 
 const app = express()
 app.use(express.json())
-app.use(cors())
 // 'https://mswoodcarving.onrender.com'
 //'http://localhost:5173'
 //https://mswoodcarving.onrender.com
