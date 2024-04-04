@@ -34,7 +34,7 @@ adminRouter.post('/signin', async(req, res) => {
         if(!validPassword) return res.status(401).json({message: 'wrong credential'})
         // one day = 24 * 60 * 60 * 1000
         const token = Jwt.sign({id: validAdmin._id}, process.env.JWT_SECRET, {},)
-        res.cookie('token', token, {httpOnly: true, maxAge: 24*60*60*1000, secure: process.env.NODE_ENV ==='production'})
+        //res.cookie('token', token, {httpOnly: true, maxAge: 24*60*60*1000,})
         res.status(200).json({email: validAdmin.email, username: validAdmin.username, token})
     } catch(error){
         console.log(error)

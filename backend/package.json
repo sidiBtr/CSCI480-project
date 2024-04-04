@@ -9,7 +9,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "prod": "NODE_ENV=production nodemon index.js",
-    "build": "npm install --prefix ../frontend && npm run build --prefix ../frontend && npm install"
+    "build": "npm install && npm install --prefix ../frontend && npm run build --prefix ../frontend "
   },
   "keywords": [],
   "author": "",
