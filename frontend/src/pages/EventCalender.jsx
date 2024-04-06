@@ -10,7 +10,7 @@ export default function EventCalender() {
     const fetchEvents = async ()=> {
       try{
         setLoading(true)
-        const response = await fetch("http://localhost:3000/api/events/allEvents")
+        const response = await fetch("https://mswoodcarving.onrender.com/api/events/allEvents")
         if(!response){
           setError(true)
           throw new Error(`error occured ${response.status}`)

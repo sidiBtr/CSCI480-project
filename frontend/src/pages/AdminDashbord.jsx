@@ -23,7 +23,7 @@ const AdminDashboard = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/events/allEvents");
+      const response = await fetch("https://mswoodcarving.onrender.com/api/events/allEvents");
       if (!response.ok) {
         throw new Error('Failed to fetch events');
       }
@@ -37,7 +37,7 @@ const AdminDashboard = () => {
   };
   const fetchUsers = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/user/admins");
+      const response = await fetch("https://mswoodcarving.onrender.com/api/user/admins");
       if (!response.ok) {
         throw new Error('Failed to fetch users');
       }
@@ -72,7 +72,7 @@ const AdminDashboard = () => {
   }
   const handleEditUser = async (userId, editedUserData) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/user/update/${userId}`, {
+      const response = await fetch(`https://mswoodcarving.onrender.com/api/user/update/${userId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(editedUserData)
@@ -89,7 +89,7 @@ const AdminDashboard = () => {
   
   const DeleteUser = async(adminId) => {
     try{
-      const response = await fetch(`http://localhost:3000/api/user/delete/${adminId}`, {
+      const response = await fetch(`https://mswoodcarving.onrender.com/api/user/delete/${adminId}`, {
         method: 'DELETE'
       })
       if(!response.ok) {
@@ -109,7 +109,7 @@ const AdminDashboard = () => {
 
   const handleDeleteEvent = async (eventId) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/events/deleteEvent/${eventId}`, {
+      const response = await fetch(`https://mswoodcarving.onrender.com/api/events/deleteEvent/${eventId}`, {
         method: 'DELETE'
       });
       if (!response.ok) {
@@ -124,7 +124,7 @@ const AdminDashboard = () => {
 
   const handleEditEvent = async (eventId, editedEvent) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/events/updateEvent/${eventId}`, {
+      const response = await fetch(`https://mswoodcarving.onrender.com/api/events/updateEvent/${eventId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
