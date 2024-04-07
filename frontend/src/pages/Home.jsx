@@ -50,6 +50,7 @@ export default function Home() {
     </div>
     <footer>
         <p>WIR GEBEN HOLZ LEBEN</p>
+        <p className="translation">We Give Life To Wood</p>
         <p><Link to={"http://maps.apple.com/?q=2230+Blanchard+Ave,+Findlay+OH"}>2230 Blanchard Avenue, Findlay, Ohio</Link></p>
         <p>Connect with us:</p>
         <div className="social-media-icons">

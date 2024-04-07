@@ -289,4 +289,6 @@ html {
     gap: 16px;
   }
   
-
+  footer .translation {
+    font-style: italic;
+  }
