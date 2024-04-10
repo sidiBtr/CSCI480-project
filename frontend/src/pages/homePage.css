@@ -4,6 +4,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 .home-container {
   display: block;
   padding-bottom: 4em;
@@ -289,4 +290,6 @@ html {
     gap: 16px;
   }
   
-
+  footer .translation {
+    font-style: italic;
+  }
