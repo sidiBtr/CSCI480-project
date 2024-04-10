@@ -4,6 +4,7 @@ export default function AddUser({ onClose }) {
   const [adminInfos, setAdminInfo] = useState({});
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
+  const api = import.meta.env.VITE_API_KEY
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -33,7 +34,7 @@ export default function AddUser({ onClose }) {
 
     try {
       setLoading(true);
-      const response = await fetch('https://mswoodcarving.onrender.com/api/user/signup', {
+      const response = await fetch(`${api}/api/user/signup`, {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify(adminInfos),

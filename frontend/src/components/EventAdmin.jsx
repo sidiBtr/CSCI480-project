@@ -8,16 +8,12 @@ export default function EventAdmin({ event, onDelete, onEdit }) {
   const handleEditClick = () => {
     setShowEditModal(true);
     setEditedEvent(event);
-    console.log('edit button clicked', event)
   };
 
   const handleSaveEdit = async (e) => {
     e.preventDefault()
     try {
-      console.log('Save Edit button clicked')
-      console.log('edited event in EventAdmin.jsx:', editedEvent);
       await onEdit(editedEvent);
-      console.log('save button clicked', editedEvent)
       setShowEditModal(false);
     } catch (error) {
       console.error('Error updating event:', error);
@@ -41,16 +37,26 @@ export default function EventAdmin({ event, onDelete, onEdit }) {
     }
   };
 
-  // Format date yyyy-MM-dd
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return date.toISOString().split('T')[0];
-  };
+  const formatDate = (date) => {
+    const eventDate = new Date(date);
+    const formattedDate = eventDate.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+    return formattedDate; // Return the formatted date instead of `formatDate`
+};
 
-  // Format time HH:MM
   const formatTime = (time) => {
-    return time.slice(0, 5);
-  };
+    const eventTime = new Date(time);
+    const formattedTime = eventTime.toLocaleTimeString('en-US', {
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+    return formattedTime; 
+};
+
+
 
   return (
     <div className='event'>

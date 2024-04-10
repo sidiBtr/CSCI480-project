@@ -7,6 +7,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
+  const api = import.meta.env.VITE_API_KEY
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -38,7 +39,7 @@ export default function Login() {
 
     try {
       setLoading(true);
-      const response = await fetch('https://mswoodcarving.onrender.com/api/user/signin', {
+      const response = await fetch(`${api}/api/user/signin`, {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify(adminInfos),
@@ -48,10 +49,7 @@ export default function Login() {
         throw new Error('An error occurred', response.status);
       }
       const data = await response.json();
-      console.log(data)
       localStorage.setItem('token',data.token)
-      console.log(data.token)
-      console.log('Successful login');
       setLoading(false);
       navigate('/dashbord');
     } catch (error) {

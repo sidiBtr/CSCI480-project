@@ -4,6 +4,7 @@ const AddEvent = ({ onClose, onOutsideClick }) => {
   const [eventInfos, setEventInfos] = useState({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const api = import.meta.env.VITE_API_KEY
 
   const handleChange = (e) => {
     setEventInfos({ ...eventInfos, [e.target.id]: e.target.value });
@@ -13,7 +14,7 @@ const AddEvent = ({ onClose, onOutsideClick }) => {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await fetch("https://mswoodcarving.onrender.com/api/events/create_event", {
+      const response = await fetch(`${api}/api/events/create_event`, {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify(eventInfos)

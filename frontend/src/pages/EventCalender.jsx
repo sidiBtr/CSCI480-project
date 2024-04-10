@@ -6,11 +6,12 @@ export default function EventCalender() {
   const[events, setEvent] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const api = import.meta.env.VITE_API_KEY
   useEffect(() => {
     const fetchEvents = async ()=> {
       try{
         setLoading(true)
-        const response = await fetch("https://mswoodcarving.onrender.com/api/events/allEvents")
+        const response = await fetch(`${api}/api/events/allEvents`)
         if(!response){
           setError(true)
           throw new Error(`error occured ${response.status}`)
