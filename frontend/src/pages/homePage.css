@@ -4,9 +4,6 @@ html {
   scroll-behavior: smooth;
 }
 
-#welcome-section {
-  height: 100vh;
-}
 
 .home-container {
   display: block;
