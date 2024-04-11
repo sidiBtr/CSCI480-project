@@ -37,38 +37,26 @@ export default function EventAdmin({ event, onDelete, onEdit }) {
     }
   };
 
-  const formatDate = (date) => {
-    const eventDate = new Date(date);
-    const formattedDate = eventDate.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-    return formattedDate; // Return the formatted date instead of `formatDate`
-};
-
-  const formatTime = (time) => {
-    const eventTime = new Date(time);
-    const formattedTime = eventTime.toLocaleTimeString('en-US', {
-      hour: '2-digit',
-      minute: '2-digit',
-    });
-    return formattedTime; 
-};
+  const evenDate = new Date(event.date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC'
+  });
 
 
 
   return (
-    <div className='event'>
+    <div className="event">
       <div className='event-header'>
-        <span className='date'>{formatDate(event.date)}</span>
-        <span className='time'>{formatTime(event.startTime)} to {formatTime(event.endTime)}</span>
+        <span className='date'>{evenDate}</span>
+        <span className='time'>{event.startTime} To {event.endTime}</span>
       </div>
       <h2 className='eventTitle'>{event.title}</h2>
       <p className='event-description'>{event.description}</p>
       <div className='event-actions'>
-        <button onClick={handleEditClick}>Edit</button>
-        <button onClick={handleDelete}>Delete</button>
+        <button className="edit-button" onClick={handleEditClick}>Edit</button>
+        <button className="delete-button" onClick={handleDelete}>Delete</button>
       </div>
 
       {showEditModal && (
@@ -76,15 +64,19 @@ export default function EventAdmin({ event, onDelete, onEdit }) {
           <h2>Edit Event</h2>
           <form onSubmit={handleSaveEdit}>
             <input type="text" name="title" value={editedEvent.title} onChange={handleChange} placeholder="Event Title" required />
-            <input type="date" name="date" value={formatDate(editedEvent.date)} onChange={handleChange} placeholder="Event Date" required />
+            <input type="date" name="date" value={editedEvent.date} onChange={handleChange}  required />
             <textarea name="description" value={editedEvent.description} onChange={handleChange} placeholder="Event Description" required></textarea>
-            <input type="text" name="startTime" value={formatTime(editedEvent.startTime)} onChange={handleChange} placeholder="Start Time" required />
-            <input type="text" name="endTime" value={formatTime(editedEvent.endTime)} onChange={handleChange} placeholder="End Time" required />
+            <input type="text" name="startTime" value={editedEvent.startTime} onChange={handleChange} placeholder="Start Time" required />
+            <input type="text" name="endTime" value={editedEvent.endTime} onChange={handleChange} placeholder="End Time" required />
+            <div>
             <button className='cancel-btn' type="button" onClick={handleCancelEdit}>Cancel</button>
-            <button className='cancel-btn' type="submit">Save</button>
+            <button className='save-btn' type="submit">Save</button>
+            </div>
+            
           </form>
         </div>
       )}
     </div>
+    
   );
 }

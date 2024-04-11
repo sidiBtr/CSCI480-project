@@ -27,20 +27,13 @@ export default function EventCalender() {
     }
     fetchEvents()
   }, [])
-  // format the date
-  const formatDate = (date) => {
-    const eventDate = new Date(date);
-    const formattedDate = eventDate.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-    const formattedTime = eventDate.toLocaleTimeString('en-US', {
+  
+    /*const formattedTime = eventDate.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit',
     });
     return `${formattedDate} `;
-  };
+  };*/
 
   return (
     <div className='events-container'>
@@ -51,7 +44,7 @@ export default function EventCalender() {
         ) : error ? (
           <p>Error: {error}</p>
         ) : events.map((event) => (
-          <Event key={event._id} event={{ ...event, date: formatDate(event.date) }} />
+          <Event key={event._id} event={event} />
         ))}
       </div>
     </div>

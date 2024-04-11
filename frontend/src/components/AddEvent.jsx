@@ -49,7 +49,7 @@ const AddEvent = ({ onClose, onOutsideClick }) => {
           </textarea>
           <input onChange={handleChange} type='text' id='startTime' placeholder='Start Time' required />
           <input onChange={handleChange} type='text' id='endTime' placeholder='End Time' required />
-          <button type='submit'>{loading? '....': 'Create'}</button>
+          <button className='create-btn' type='submit'>{loading? '....': 'Create'}</button>
         </form>
       </div>
     </div>
