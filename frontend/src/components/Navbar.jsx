@@ -23,6 +23,9 @@ export default function Navbar() {
            <Link to={'/login'}>
            <li>Login</li>
            </Link>
+           <Link to={'/dashbord'}>
+           <li>Admin</li>
+           </Link>
         </ul>
       </nav>
       <div className="clear"></div>
