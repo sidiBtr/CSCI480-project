@@ -4,13 +4,17 @@ html {
   scroll-behavior: smooth;
 }
 
+#welcome-section {
+  height: 100vh;
+}
 
 .home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 4em;
+  
+
 }
 
 .home-text {
