@@ -20,6 +20,7 @@ export default function Home() {
         <h3 className="welcome">Welcome To</h3>
         <h1>Millstream</h1>
         <h3 className="club">Wood Carvers!</h3>
+        <div className="image-with-text">
         <p>We welcome youth and adults from all walks of life from beginners 
         to experienced carvers who desire to learn more about wood carving and burning. 
         Our purpose is to promote wood carving and to share ideas and techniques of wood carving 
@@ -27,10 +28,12 @@ export default function Home() {
         tools, wood supply, a resource library and weekly fellowship among members 
         at our clubhouse at open carving sessions and scheduled events. 
         </p>
+        <img className="home-image" title="Our founder Tom Miller" src={tom} alt="Our founder Tom Miller"/>
         </div>
-        <div className="home-image">
+        </div>
+        {/*<div className="home-image">
         <img title="Our founder Tom Miller" src={tom} alt="Our founder Tom Miller"/>
-        </div>
+  </div>*/}
       </div>
     </section>
 
