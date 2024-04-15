@@ -28,12 +28,7 @@ export default function EventCalender() {
     fetchEvents()
   }, [])
   
-    /*const formattedTime = eventDate.toLocaleTimeString('en-US', {
-      hour: '2-digit',
-      minute: '2-digit',
-    });
-    return `${formattedDate} `;
-  };*/
+
 
   return (
     <div className='events-container'>
