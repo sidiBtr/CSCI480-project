@@ -1,3 +1,4 @@
+// this is the entry file for the website
 import  express  from "express";
 import mongoose from "mongoose";
 import dotenv from 'dotenv'
@@ -10,6 +11,7 @@ import path from 'path'
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url); 
 const __dirname = path.dirname(__filename); 
+// create an express app
 const app = express()
 app.use(express.json())
 // 'https://mswoodcarving.onrender.com'
@@ -25,6 +27,7 @@ app.use(
 )
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
+// initiate a connection to the database
 mongoose.connect(process.env.MONGO)
 .then(() => {
     app.listen(process.env.PORT, () => {

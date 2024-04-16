@@ -16,12 +16,12 @@ const AdminDashboard = () => {
   const [showUserModal, setShowUserModal] = useState(false);
   const [showAddUserModal, setShowAddUserModal] = useState(false)
   const api = import.meta.env.VITE_API_KEY
-
+  // fetch the admin users from the backend
   useEffect(() => {
     fetchUsers();
     fetchEvents();
   }, []);
-
+   // fetch the events from the backend
   const fetchEvents = async () => {
     try {
       const response = await fetch(`${api}/api/events/allEvents`);
@@ -71,6 +71,7 @@ const AdminDashboard = () => {
   const handleCloseAddUserModal = () => {
     setShowAddUserModal(false)
   }
+  // edit a particular admin user
   const handleEditUser = async (userId, editedUserData) => {
     try {
       const response = await fetch(`${api}/api/user/update/${userId}`, {

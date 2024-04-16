@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+// creating events database schema
 const eventsModel = new mongoose.Schema({
     title: {
         type: String,

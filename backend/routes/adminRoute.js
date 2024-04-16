@@ -7,6 +7,7 @@ dotenv.config()
 import { verifyToken } from '../verifyUser.js'
 
 const adminRouter = express.Router()
+// signup route. create a valid user and add it to the database
 adminRouter.post('/signup', async(req, res) => {
     
     try{
@@ -24,6 +25,7 @@ adminRouter.post('/signup', async(req, res) => {
     }
     
 })
+// sign in endpoint. verfiy the user credential
 adminRouter.post('/signin', async(req, res) => {
     try{
         const {email, password} = req.body
@@ -33,6 +35,7 @@ adminRouter.post('/signin', async(req, res) => {
         const validPassword = bcrypt.compareSync(password, validAdmin.password)
         if(!validPassword) return res.status(401).json({message: 'wrong credential'})
         // one day = 24 * 60 * 60 * 1000
+        // generate a json web token key
         const token = Jwt.sign({id: validAdmin._id}, process.env.JWT_SECRET, {},)
         //res.cookie('token', token, {httpOnly: true, maxAge: 24*60*60*1000,})
         res.status(200).json({email: validAdmin.email, username: validAdmin.username, token})

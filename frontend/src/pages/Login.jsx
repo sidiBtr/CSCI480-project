@@ -3,10 +3,11 @@ import './login.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
-    const [adminInfos, setAdminInfo] = useState({});
+  const [adminInfos, setAdminInfo] = useState({});
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
+  // import api key from the .env file
   const api = import.meta.env.VITE_API_KEY
 
   const handleChange = (e) => {
@@ -39,6 +40,7 @@ export default function Login() {
 
     try {
       setLoading(true);
+      // send an api call to the particular endpoint
       const response = await fetch(`${api}/api/user/signin`, {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
@@ -49,6 +51,7 @@ export default function Login() {
         throw new Error('An error occurred', response.status);
       }
       const data = await response.json();
+      // store the data into local storage
       localStorage.setItem('token',data.token)
       setLoading(false);
       navigate('/dashbord');

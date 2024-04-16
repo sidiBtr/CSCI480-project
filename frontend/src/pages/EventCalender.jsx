@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './eventscalenderPage.css'
 import Event from '../components/Event'
-
+// this is an eventcalendar component.
 export default function EventCalender() {
   const[events, setEvent] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const api = import.meta.env.VITE_API_KEY
+  // fetch from the backend
   useEffect(() => {
     const fetchEvents = async ()=> {
       try{

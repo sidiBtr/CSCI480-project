@@ -1,7 +1,7 @@
 import express from 'express'
 import { Event } from '../model/events.model.js'
 const eventRouter = express.Router()
-  
+  // create an event and add it to the database
   eventRouter.post('/create_event', async (req, res) => {
     const { title, description, date, startTime, endTime } = req.body;
     console.log(req.body)
