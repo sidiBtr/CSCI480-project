@@ -18,8 +18,6 @@ html {
 }
 
 .home-text {
-    /*padding-right: 10em;*/
-    /*padding-left: 3em;*/
     padding-top: 1em;
   }
 
@@ -72,13 +70,6 @@ html {
     padding-bottom: 3em;
   }
 
-  /*.home-image img {
-    position: absolute;
-    width: 100%;
-    max-width: 500px;
-    object-fit: cover;
-  }*/
-
   .img-text {
     display: flex;
     flex-direction: row;
@@ -119,6 +110,9 @@ html {
     width: 350px;
   }
 
+  /*
+    Fix formatting on small sized screens and shrink elements to fit
+  */
   @media (max-width: 650px) {
     .home-container {
       display: flex;
@@ -231,6 +225,9 @@ html {
       }
   }
 
+  /*
+    Fix formatting on medium sized screens and shrink elements to fit
+  */
   @media (max-width: 1000px) and (min-width: 651px) {
 
     .home-text {
@@ -264,23 +261,9 @@ html {
     }
   }
 
-  @media (max-width: 1400px) {
-    /*.home-image {
-      display: none;
-      padding-left: 0em;
-      padding-top: 0em;
-      max-width: 0%;
-    }
-  
-    .home-image img {
-      position: relative;
-      width: 0%;
-      max-width: 0%;
-      object-fit: cover;
-    }*/
-  }
-
-
+  /*
+    Format the footer, the club motto and translation, the contact information, and the links
+  */
   footer {
     bottom: 0;
     margin-top: auto;

@@ -1,3 +1,9 @@
+{/* 
+  This is the home page of the website. It will display a warm welcome message with 
+  an honorary image of Tom Miller, the founder of the club. It will also display 
+  example wood carvings and wood burnings, as well as a footer with contact information.
+*/}
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './homePage.css'
@@ -31,9 +37,6 @@ export default function Home() {
         <img className="home-image" title="Our founder Tom Miller" src={tom} alt="Our founder Tom Miller"/>
         </div>
         </div>
-        {/*<div className="home-image">
-        <img title="Our founder Tom Miller" src={tom} alt="Our founder Tom Miller"/>
-  </div>*/}
       </div>
     </section>
 
