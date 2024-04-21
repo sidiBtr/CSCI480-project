@@ -1,35 +1,38 @@
-import React, { useEffect, useState } from 'react'
-import './eventscalenderPage.css'
-import Event from '../components/Event'
-// this is an eventcalendar component.
+import React, { useEffect, useState } from 'react';
+import './eventscalenderPage.css';
+import Event from '../components/Event';
+
+/**
+ * Component for displaying an event calendar.
+ * 
+ * @returns {JSX.Element} - Returns the EventCalender component.
+ */
 export default function EventCalender() {
-  const[events, setEvent] = useState([])
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
-  const api = import.meta.env.VITE_API_KEY
-  // fetch from the backend
+  const [events, setEvent] = useState([]); // State for events
+  const [loading, setLoading] = useState(false); // State for loading indicator
+  const [error, setError] = useState(null); // State for error handling
+  const api = import.meta.env.VITE_API_KEY;
+
+  // Fetch events from the backend
   useEffect(() => {
-    const fetchEvents = async ()=> {
-      try{
-        setLoading(true)
-        const response = await fetch(`${api}/api/events/allEvents`)
-        if(!response){
-          setError(true)
-          throw new Error(`error occured ${response.status}`)
+    const fetchEvents = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(`${api}/api/events/allEvents`);
+        if (!response.ok) {
+          setError(true);
+          throw new Error(`Error occurred ${response.status}`);
         }
-        const data = await response.json()
-        setEvent(data.events)
-        setLoading(false)
-
-      } catch(error){
+        const data = await response.json();
+        setEvent(data.events);
+        setLoading(false);
+      } catch (error) {
         setError("An error occurred while fetching events.");
-        setLoading(false)
+        setLoading(false);
       }
-    }
-    fetchEvents()
-  }, [])
-  
-
+    };
+    fetchEvents();
+  }, []);
 
   return (
     <div className='events-container'>

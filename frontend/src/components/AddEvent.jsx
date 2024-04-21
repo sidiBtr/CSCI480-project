@@ -1,15 +1,34 @@
 import React, { useState } from 'react';
-import './addEvent.css'
-const AddEvent = ({ onClose, onOutsideClick }) => {
-  const [eventInfos, setEventInfos] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const api = import.meta.env.VITE_API_KEY
+import './addEvent.css';
 
+/**
+ * Component for adding a new event.
+ * 
+ * @param {Object} props - Component props.
+ * @param {Function} props.onClose - Function to close the modal.
+ * @param {Function} props.onOutsideClick - Function to handle click outside the modal.
+ * @returns {JSX.Element} - Returns the AddEvent component.
+ */
+const AddEvent = ({ onClose, onOutsideClick }) => {
+  const [eventInfos, setEventInfos] = useState({}); // State for event information
+  const [loading, setLoading] = useState(false); // State for loading indicator
+  const [error, setError] = useState(null); // State for error handling
+  const api = import.meta.env.VITE_API_KEY; // API key for fetching data
+
+  /**
+   * Function to handle input changes.
+   * 
+   * @param {Object} e - Event object.
+   */
   const handleChange = (e) => {
     setEventInfos({ ...eventInfos, [e.target.id]: e.target.value });
   };
 
+  /**
+   * Function to handle form submission.
+   * 
+   * @param {Object} e - Event object.
+   */
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -27,8 +46,8 @@ const AddEvent = ({ onClose, onOutsideClick }) => {
       }
 
       setLoading(false);
-      console.log('event added successfully')
-      onClose()
+      console.log('Event added successfully');
+      onClose();
     } catch (error) {
       console.error(error);
       setLoading(false);
@@ -44,12 +63,10 @@ const AddEvent = ({ onClose, onOutsideClick }) => {
         <form onSubmit={handleSubmit}>
           <input onChange={handleChange} type='text' id='title' placeholder='Event title' required />
           <input onChange={handleChange} type='date' id='date' placeholder='Date' required />
-          <textarea onChange={handleChange} type='text' id='description' placeholder='Description' required>
-            
-          </textarea>
+          <textarea onChange={handleChange} id='description' placeholder='Description' required></textarea>
           <input onChange={handleChange} type='text' id='startTime' placeholder='Start Time' required />
           <input onChange={handleChange} type='text' id='endTime' placeholder='End Time' required />
-          <button className='create-btn' type='submit'>{loading? '....': 'Create'}</button>
+          <button className='create-btn' type='submit'>{loading ? '...' : 'Create'}</button>
         </form>
       </div>
     </div>

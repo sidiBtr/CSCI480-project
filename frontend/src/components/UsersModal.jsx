@@ -1,27 +1,54 @@
 import { useState } from 'react';
 import './userModal.css';
 
+/**
+ * Component for displaying and managing user information.
+ * 
+ * @param {Object} props - Component props.
+ * @param {Array} props.admins - Array of admin users.
+ * @param {Function} props.onClose - Function to close the modal.
+ * @param {Function} props.onDelete - Function to delete a user.
+ * @param {Function} props.onEdit - Function to edit a user.
+ * @returns {JSX.Element} - Returns the UsersModal component.
+ */
 export default function UsersModal({ admins, onClose, onDelete, onEdit }) {
-  const [editedUserData, setEditedUserData] = useState({});
-  const [showEditUserModal, setShowEditUserModal] = useState(false);
+  const [editedUserData, setEditedUserData] = useState({}); // State for edited user data
+  const [showEditUserModal, setShowEditUserModal] = useState(false); // State for showing edit user modal
 
+  /**
+   * Function to handle edit button click.
+   * 
+   * @param {Object} admin - Admin user object.
+   */
   const handleEditClick = (admin) => {
     setEditedUserData(admin);
     setShowEditUserModal(true);
   };
 
+  /**
+   * Function to handle closing edit modal.
+   */
   const handleCloseEditModal = () => {
     setEditedUserData({});
     setShowEditUserModal(false);
   };
 
+  /**
+   * Function to handle input changes.
+   * 
+   * @param {Object} e - Event object.
+   */
   const handleChange = (e) => {
     setEditedUserData({ ...editedUserData, [e.target.name]: e.target.value });
   };
+
+  /**
+   * Function to handle saving edited user data.
+   */
   const handleSaveUser = () => {
-    onEdit(editedUserData, editedUserData._id)
-    handleCloseEditModal()
-  }
+    onEdit(editedUserData, editedUserData._id);
+    handleCloseEditModal();
+  };
 
   return (
     <div className='admin-modal'>
