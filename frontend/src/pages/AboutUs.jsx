@@ -1,3 +1,5 @@
+// This is the About Us Page Content. It describes the history and progression of Millstream Wood Carvers and how they came to be.
+// Below is information that explains the organization.
 import React from 'react'
 import './aboutusPage.css'
 

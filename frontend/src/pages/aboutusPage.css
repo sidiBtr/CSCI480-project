@@ -1,3 +1,5 @@
+/* This styles the About Us Page using CSS and allows design, alignment, color and more*/
+
 .about-us-container {
     /* Image CSS*/
     background-image: url("../images/Painted_Edit15-KLxFJYlV.png");
@@ -23,6 +25,7 @@
 
 
 .history-title{
+    /* format history title*/
     color: maroon;
     font-family: 'Times New Roman', Times, serif;
     font-size: 50px;
@@ -32,7 +35,7 @@
 }
 
 p{
-
+    /* format the information under title*/
     text-align: center;
     color: black;
     padding: 0 0 25px 0;
