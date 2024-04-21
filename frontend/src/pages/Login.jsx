@@ -60,7 +60,7 @@ export default function Login() {
       // Store token in local storage upon successful login
       localStorage.setItem('token', data.token);
       setLoading(false);
-      navigate('/dashboard');
+      navigate('/dashbord');
     } catch (error) {
       console.log(error);
       setLoading(false);
